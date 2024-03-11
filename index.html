@@ -9,9 +9,22 @@
     <div>
         <label>Tên đăng nhập:</label><input type="text" name="txtUserName">
         <label>mật khẩu:</label><input type="text" name="txtpassWord">
-        <button type="button"name="btnLogin">ĐĂNG NHẬP</button>
+        <button type="button"name="btnLogin" onclick="myFunction()">ĐĂNG NHẬP</button>
 
     </div>
     
 </body>
+<script>
+    function myFunction() {
+     let username=   document.getElementsByName("txtUserName");
+     let pass=   document.getElementsByName("txtpassWord");
+     console.log(username[0].value)
+     console.log(pass)
+     if(username[0].value == 'admin' || pass[0].value=='admin'){
+        alert("DANG nhap thanh cong va dang chuyen trang")
+     }else{
+        alert("Dang nhap that bai vui long thu lai sau")
+     }
+      }
+</script>
 </html>
